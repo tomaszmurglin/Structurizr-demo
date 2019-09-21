@@ -11,7 +11,7 @@ public class Publisher {
     private static final long WORKSPACE_ID = -1;
 
     public static void publishToDiagramStructurizr(final Workspace workspace) throws StructurizrClientException {
-        StructurizrClient structurizrClient = new StructurizrClient((API_KEY), API_SECRET);
+        final var structurizrClient = new StructurizrClient((API_KEY), API_SECRET);
         structurizrClient.putWorkspace(WORKSPACE_ID, workspace);
     }
 }
